@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from time import timezone
 from django.db import models
 from django.contrib.auth.models import User
@@ -22,4 +23,8 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'    
     
