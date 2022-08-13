@@ -14,9 +14,9 @@ class ProductListPagination(PageNumberPagination):
     page_query_param = 'page_size'
     max_page_size = 10000
 
-class ProductViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerialaizer
+# class ProductViewSet(viewsets.ModelViewSet):
+#     queryset = Product.objects.all()
+#     serializer_class = ProductSerialaizer
 
 class ProductAPIList(generics.ListCreateAPIView):
     queryset = Product.objects.all()

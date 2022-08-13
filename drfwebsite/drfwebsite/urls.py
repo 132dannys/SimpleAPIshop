@@ -20,14 +20,14 @@ from shop.views import *
 from rest_framework import routers
 
 
-router = routers.SimpleRouter()
-router.register(r'products', ProductViewSet)
+# router = routers.SimpleRouter()
+# router.register(r'products', ProductViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include(router.urls)),
+    # path('api/v1/', include(router.urls)),
     path('api/v1/shp-auth/', include('rest_framework.urls')),
-#     path('api/v1/productlist/', ProductAPIList.as_view()),
-#     path('api/v1/productlist/<int:pk>/', ProductAPIUpdate.as_view()),
-#     path('api/v1/productdetail/<int:pk>/', ProductAPIDetailView.as_view()),
+    path('api/v1/productlist/', ProductAPIList.as_view()),
+    path('api/v1/productlist/<int:pk>/', ProductAPIUpdate.as_view()),
+    path('api/v1/productdetail/<int:pk>/', ProductAPIDetailView.as_view()),
 ]
